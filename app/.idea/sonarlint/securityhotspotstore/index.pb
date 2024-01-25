@@ -1,0 +1,23 @@
+
+r
+Bsrc/main/java/br/com/alura/forum/controller/TopicosController.java,d/a/dae7e103a6a0986421111b83368f09a60c485982
+p
+@src/main/java/br/com/alura/forum/controller/HelloController.java,1/7/17fc9a42b9ef72547789b9c82cde197190f4d461
+y
+Isrc/main/java/br/com/alura/forum/config/security/AutenticacaoService.java,8/e/8e03f4f9b2641f8f5a11732ae23126bcfa34a0b1
+€
+Psrc/main/java/br/com/alura/forum/config/security/AutenticacaoViaTokenFilter.java,1/c/1cbbc8ebac7f659ed41ec1a0b872e1ef7ddff763
+
+Osrc/main/java/br/com/alura/forum/config/security/DevSecurityConfigurations.java,9/f/9f94ee4af485882ab7bb9a060292a562da7ff35d
+|
+Lsrc/main/java/br/com/alura/forum/config/security/SecurityConfigurations.java,0/d/0d021a2f545d2c263a7c156b07543eba4d1d1d70
+r
+Bsrc/main/java/br/com/alura/forum/config/security/TokenService.java,a/9/a926ad784806d5c0224b5ad4c79bbb26e2a1b9f3
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+w
+Gsrc/main/java/br/com/alura/forum/controller/AutenticacaoController.java,f/2/f25a28290375410635b271394dfa6c343f1faeca
+8
+start.sh,9/d/9dcf658ee8180c343527e6fa4612975d22036004
