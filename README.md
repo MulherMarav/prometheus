@@ -97,3 +97,68 @@ drwxr-xr-x  3 dyanearaujo  staff    96B Jan 25 12:02 wal
 drwxrwxr-x@ 6 dyanearaujo  staff   192B Jan 25 12:02 prometheus_data
 ~ prometheus % chmod 777 prometheus_data
 `````
+
+* Client para consumir os endpoints da aplicação e através do script gera requisições de sucessos e erros automaticamente
+* Dentro de client:
+
+````bash
+~ prometheus-grafana % cd client
+~ client % ls
+Dockerfile	client.sh
+````
+
+* Volte para a raiz do projeto e retire os comentários da parte do client api do docker-compose.yaml, para salvar esc e depois :wq
+
+````bash
+~ client % cd ..
+~ prometheus-grafana % vim docker-compose.yaml
+
+  client-forum-api:
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    image: client-forum-api
+    container_name: client-forum-api
+    restart: unless-stopped
+    networks:
+      - proxy
+    depends_on:
+      - proxy-forum-api
+````
+
+* Para subir o client e os demais containers
+
+````bash
+docker-compose up -d
+````
+
+<p>O Prometheus utiliza quatro tipos de dados para métricas: Instant vector (vetor instantâneo), Range vector (vetor de uma série temporal), Float 
+(vetor escalar) e String (vetor não-utilizado).</p>
+
+* Instant Vector:
+<p>Representa um vetor instantâneo.
+Retorna uma série temporal com índices representados por labels.
+Exemplo: logback_events_total(application="app-forum-api", instance="app-forum-api:8080", job="app-forum-api", level="debug").</p>
+
+* Range Vector:
+<p>Representa um vetor de uma série temporal.
+Obtido ao adicionar um intervalo de tempo à consulta, como logback_events_total[1m].
+Cada série temporal possui valores para cada scrape time do Prometheus.</p>
+
+* Float (Dado Escalar):
+<p>Representa um valor float simples.
+Exemplo: hikaricp_connections_idle{application="app-forum-api", pool-"HikariPool-1"}.<p>
+
+* String:
+<p>Tipo não amplamente utilizado no contexto do Prometheus.
+Raramente encontrado em casos de uso.
+A análise de séries temporais, instant vectors e range vectors permite compreender e visualizar dados no Prometheus. A documentação do Prometheus 
+fornece informações adicionais sobre esses tipos de dados e seu uso.</p>
+
+
+
+
+
+
+
+
