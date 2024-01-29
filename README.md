@@ -1,6 +1,25 @@
 # prometheus-grafana
 Observabilidade: coletando métricas de uma aplicação com Prometheus
 
+### Observabilidade
+
+Grafana, Prometheus e OpenTelemetry são ferramentas frequentemente utilizadas em conjunto para monitoramento e observabilidade, mas desempenham 
+funções distintas em um ambiente de TI.
+* Prometheus:
+  * Função: Sistema de monitoramento e alerta.
+  * Principal Característica: Coleta métricas (como CPU, memória) e eventos de sistemas distribuídos.
+  * Abordagem: Pull-based, onde o servidor Prometheus busca ativamente métricas dos alvos.
+* Grafana:
+    * Função: Plataforma de visualização e painéis para dados de métricas.
+    * Principal Característica: Oferece uma interface gráfica para a análise e visualização de dados coletados por ferramentas como o Prometheus.
+    * Uso: Geralmente usado em conjunto com Prometheus para criar dashboards e alertas visuais.
+* OpenTelemetry:
+    * Função: Coleta de dados de instrumentação para rastreamento de aplicações.
+    * Principal Característica: Fornece instrumentação para rastreamento de solicitações através de sistemas distribuídos.
+    * Integração: Pode ser integrado com Prometheus e Grafana para monitoramento mais abrangente, fornecendo informações sobre o desempenho de aplicações distribuídas.
+      Em resumo, Prometheus é especializado em coletar métricas de sistemas, Grafana em visualizar essas métricas de forma gráfica, e OpenTelemetry em fornecer informações detalhadas sobre o rastreamento de aplicações distribuídas. Juntas, essas ferramentas proporcionam uma solução abrangente para monitoramento e observabilidade em ambientes complexos.
+
+
 ### Na raiz do projeto
 
 * Pra ver o conteúdo do mysql via cmd
@@ -131,6 +150,8 @@ Dockerfile	client.sh
 ````bash
 docker-compose up -d
 ````
+
+### Anatomia das Métricas
 
 <p>O Prometheus utiliza quatro tipos de dados para métricas: Instant vector (vetor instantâneo), Range vector (vetor de uma série temporal), Float 
 (vetor escalar) e String (vetor não-utilizado).</p>
