@@ -1,4 +1,4 @@
-# prometheus-grafana
+# prometheus
 Observabilidade: coletando métricas de uma aplicação com Prometheus
 
 ### Observabilidade
